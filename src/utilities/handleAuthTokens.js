@@ -1,9 +1,10 @@
 const production = process.env.NODE_ENV === "production";
 
+
 const cookieOptions = {
   httpOnly: true,
   secure: production,
-  sameSite: "lax",
+  sameSite: production ? "none" : "lax",
   path: "/",
 };
 
