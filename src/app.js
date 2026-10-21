@@ -12,7 +12,7 @@ const app = express();
 app.use(helmet({contentSecurityPolicy: true ,crossOriginResourcePolicy: false}));
 
 // Cors to allow the front end to access to the backend server 
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = ["http://localhost:5173" , "https://reserve-hub-frontend.vercel.app"];
 
 app.use(cors({
     origin: (origin , callback) => {
